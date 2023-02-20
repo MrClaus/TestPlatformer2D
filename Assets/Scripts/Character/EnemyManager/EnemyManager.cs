@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
                     id = Random.Range(0, maxCount);
 
                 _emptySlot.Add(id);
-                Instantiate(_enemyes[Random.Range(0, _enemyes.Length - 1)], _respawnPoints[id]);
+                Instantiate(_enemyes[Random.Range(0, _enemyes.Length)], _respawnPoints[id]);
             }
         }
     }
