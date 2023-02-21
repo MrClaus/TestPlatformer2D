@@ -104,6 +104,9 @@ public class UIService : MonoBehaviour
         if (Player.instance != null)
             Destroy(Player.instance.gameObject);
 
+        for (int i = 0; i < _currentWeapon.childCount; i++)
+            _currentWeapon.GetChild(i).gameObject.SetActive(false);
+
         _currentNumberEnemy = UnityEngine.Random.Range(1, _maxNumberEnemy + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);        
         ClosePanel();
